@@ -57,5 +57,12 @@
     },
     "replace": {
         "zendframework/zend-eventmanager": "self.version"
-    }
+    },
+    "version": "3.2.2",
+    "authors": [
+        {
+            "name": "Gabriel Morgado",
+            "email": "gabriel.morgado@dbseller.com.br"
+        }
+    ]
 }
