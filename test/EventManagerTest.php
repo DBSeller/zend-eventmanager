@@ -137,12 +137,12 @@ class EventManagerTest extends TestCase
         $this->events->attach('foo.bar', function ($e) {
             $string = $e->getParam('string', '');
             $search = $e->getParam('search', '?');
-            return strpos($string, $search);
+            return strpos($string, (string) $search);
         });
         $this->events->attach('foo.bar', function ($e) {
             $string = $e->getParam('string', '');
             $search = $e->getParam('search', '?');
-            return strstr($string, $search);
+            return strstr($string, (string) $search);
         });
         $responses = $this->events->triggerUntil(
             [$this, 'evaluateStringCallback'],
